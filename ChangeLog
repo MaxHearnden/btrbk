@@ -1,3 +1,17 @@
+btrbk-0.32.7
+
+  * MIGRATION
+    - Update ssh_filter_btrbk.sh on remote hosts.
+    - All users using ssh_filter_btrbk.sh in their authorized_keys
+      configurations should upgrade immediately.
+  * This release fixes a critical security vulnerability
+    (CVE-2026-62943) in ssh_filter_btrbk.sh.
+    Specially crafted commands can bypass filter checks and execute
+    arbitrary commands. Applies to remote hosts using
+    ssh_filter_btrbk.sh in authorized_keys for command filtering.
+    Thanks to @machin0r for responsible disclosure.
+  * Minor bugfixes, spelling and documentation improvements.
+
 btrbk-0.32.6
 
   * Fix backup of unrelated (by parent_uuid) snapshots (close #339).
